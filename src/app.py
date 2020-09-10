@@ -14,7 +14,7 @@ api = Api(app)
 def create_tables():
     db.create_all()
 
-
+#Adding resources
 api.add_resource(Urls, '/Url')
 api.add_resource(Searches, '/Search')
 
