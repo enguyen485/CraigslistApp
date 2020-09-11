@@ -1,0 +1,747 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0EC8BC8F962E1B5F7C1FFEF8 /* Pods_CraigslistApp_CraigslistAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27A590E9CD6253ED8A615260 /* Pods_CraigslistApp_CraigslistAppUITests.framework */; };
+		B3E7001AFB7C5E5BABBA9E82 /* Pods_CraigslistApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F355E2237A4236294DF92FBF /* Pods_CraigslistApp.framework */; };
+		BB2F04EB66F49F06237E959E /* Pods_CraigslistAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 271F06D0C22AF59ED152A2D5 /* Pods_CraigslistAppTests.framework */; };
+		BBCC4B7F250AE1B900F4FA0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCC4B7E250AE1B900F4FA0C /* AppDelegate.swift */; };
+		BBCC4B81250AE1B900F4FA0C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCC4B80250AE1B900F4FA0C /* SceneDelegate.swift */; };
+		BBCC4B83250AE1B900F4FA0C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCC4B82250AE1B900F4FA0C /* ViewController.swift */; };
+		BBCC4B86250AE1B900F4FA0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBCC4B84250AE1B900F4FA0C /* Main.storyboard */; };
+		BBCC4B88250AE1BB00F4FA0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBCC4B87250AE1BB00F4FA0C /* Assets.xcassets */; };
+		BBCC4B8B250AE1BB00F4FA0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBCC4B89250AE1BB00F4FA0C /* LaunchScreen.storyboard */; };
+		BBCC4B96250AE1BB00F4FA0C /* CraigslistAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCC4B95250AE1BB00F4FA0C /* CraigslistAppTests.swift */; };
+		BBCC4BA1250AE1BB00F4FA0C /* CraigslistAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCC4BA0250AE1BB00F4FA0C /* CraigslistAppUITests.swift */; };
+		BBCC4BAF250AE24600F4FA0C /* APIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCC4BAE250AE24600F4FA0C /* APIHandler.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BBCC4B92250AE1BB00F4FA0C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BBCC4B73250AE1B900F4FA0C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BBCC4B7A250AE1B900F4FA0C;
+			remoteInfo = CraigslistApp;
+		};
+		BBCC4B9D250AE1BB00F4FA0C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BBCC4B73250AE1B900F4FA0C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BBCC4B7A250AE1B900F4FA0C;
+			remoteInfo = CraigslistApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		271F06D0C22AF59ED152A2D5 /* Pods_CraigslistAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CraigslistAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		27A590E9CD6253ED8A615260 /* Pods_CraigslistApp_CraigslistAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CraigslistApp_CraigslistAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		324AC3422FEB4AA3BD21A888 /* Pods-CraigslistAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CraigslistAppTests.release.xcconfig"; path = "Target Support Files/Pods-CraigslistAppTests/Pods-CraigslistAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		7778D0C33C3B2FD761FD5B55 /* Pods-CraigslistApp-CraigslistAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CraigslistApp-CraigslistAppUITests.release.xcconfig"; path = "Target Support Files/Pods-CraigslistApp-CraigslistAppUITests/Pods-CraigslistApp-CraigslistAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		BBCC4B7B250AE1B900F4FA0C /* CraigslistApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CraigslistApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBCC4B7E250AE1B900F4FA0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BBCC4B80250AE1B900F4FA0C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		BBCC4B82250AE1B900F4FA0C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BBCC4B85250AE1B900F4FA0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BBCC4B87250AE1BB00F4FA0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BBCC4B8A250AE1BB00F4FA0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BBCC4B8C250AE1BB00F4FA0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BBCC4B91250AE1BB00F4FA0C /* CraigslistAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CraigslistAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBCC4B95250AE1BB00F4FA0C /* CraigslistAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CraigslistAppTests.swift; sourceTree = "<group>"; };
+		BBCC4B97250AE1BB00F4FA0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BBCC4B9C250AE1BB00F4FA0C /* CraigslistAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CraigslistAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBCC4BA0250AE1BB00F4FA0C /* CraigslistAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CraigslistAppUITests.swift; sourceTree = "<group>"; };
+		BBCC4BA2250AE1BB00F4FA0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BBCC4BAE250AE24600F4FA0C /* APIHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHandler.swift; sourceTree = "<group>"; };
+		CFA272D7E3E1CBF7690E9D8E /* Pods-CraigslistApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CraigslistApp.release.xcconfig"; path = "Target Support Files/Pods-CraigslistApp/Pods-CraigslistApp.release.xcconfig"; sourceTree = "<group>"; };
+		D44E06CBF3D542A96C389AFD /* Pods-CraigslistApp-CraigslistAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CraigslistApp-CraigslistAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-CraigslistApp-CraigslistAppUITests/Pods-CraigslistApp-CraigslistAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		DFE056D9669C0AD8E6820E5C /* Pods-CraigslistApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CraigslistApp.debug.xcconfig"; path = "Target Support Files/Pods-CraigslistApp/Pods-CraigslistApp.debug.xcconfig"; sourceTree = "<group>"; };
+		E9AFFD0D7927718731D29D1F /* Pods-CraigslistAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CraigslistAppTests.debug.xcconfig"; path = "Target Support Files/Pods-CraigslistAppTests/Pods-CraigslistAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F355E2237A4236294DF92FBF /* Pods_CraigslistApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CraigslistApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BBCC4B78250AE1B900F4FA0C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3E7001AFB7C5E5BABBA9E82 /* Pods_CraigslistApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBCC4B8E250AE1BB00F4FA0C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB2F04EB66F49F06237E959E /* Pods_CraigslistAppTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBCC4B99250AE1BB00F4FA0C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0EC8BC8F962E1B5F7C1FFEF8 /* Pods_CraigslistApp_CraigslistAppUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BBCC4B72250AE1B900F4FA0C = {
+			isa = PBXGroup;
+			children = (
+				BBCC4B7D250AE1B900F4FA0C /* CraigslistApp */,
+				BBCC4B94250AE1BB00F4FA0C /* CraigslistAppTests */,
+				BBCC4B9F250AE1BB00F4FA0C /* CraigslistAppUITests */,
+				BBCC4B7C250AE1B900F4FA0C /* Products */,
+				E080132DB79EBF3A5AE64F99 /* Pods */,
+				F3E1F3B6F4C61CB2BDB6049C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BBCC4B7C250AE1B900F4FA0C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BBCC4B7B250AE1B900F4FA0C /* CraigslistApp.app */,
+				BBCC4B91250AE1BB00F4FA0C /* CraigslistAppTests.xctest */,
+				BBCC4B9C250AE1BB00F4FA0C /* CraigslistAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BBCC4B7D250AE1B900F4FA0C /* CraigslistApp */ = {
+			isa = PBXGroup;
+			children = (
+				BBCC4B7E250AE1B900F4FA0C /* AppDelegate.swift */,
+				BBCC4B80250AE1B900F4FA0C /* SceneDelegate.swift */,
+				BBCC4BAE250AE24600F4FA0C /* APIHandler.swift */,
+				BBCC4B82250AE1B900F4FA0C /* ViewController.swift */,
+				BBCC4B84250AE1B900F4FA0C /* Main.storyboard */,
+				BBCC4B87250AE1BB00F4FA0C /* Assets.xcassets */,
+				BBCC4B89250AE1BB00F4FA0C /* LaunchScreen.storyboard */,
+				BBCC4B8C250AE1BB00F4FA0C /* Info.plist */,
+			);
+			path = CraigslistApp;
+			sourceTree = "<group>";
+		};
+		BBCC4B94250AE1BB00F4FA0C /* CraigslistAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				BBCC4B95250AE1BB00F4FA0C /* CraigslistAppTests.swift */,
+				BBCC4B97250AE1BB00F4FA0C /* Info.plist */,
+			);
+			path = CraigslistAppTests;
+			sourceTree = "<group>";
+		};
+		BBCC4B9F250AE1BB00F4FA0C /* CraigslistAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BBCC4BA0250AE1BB00F4FA0C /* CraigslistAppUITests.swift */,
+				BBCC4BA2250AE1BB00F4FA0C /* Info.plist */,
+			);
+			path = CraigslistAppUITests;
+			sourceTree = "<group>";
+		};
+		E080132DB79EBF3A5AE64F99 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DFE056D9669C0AD8E6820E5C /* Pods-CraigslistApp.debug.xcconfig */,
+				CFA272D7E3E1CBF7690E9D8E /* Pods-CraigslistApp.release.xcconfig */,
+				D44E06CBF3D542A96C389AFD /* Pods-CraigslistApp-CraigslistAppUITests.debug.xcconfig */,
+				7778D0C33C3B2FD761FD5B55 /* Pods-CraigslistApp-CraigslistAppUITests.release.xcconfig */,
+				E9AFFD0D7927718731D29D1F /* Pods-CraigslistAppTests.debug.xcconfig */,
+				324AC3422FEB4AA3BD21A888 /* Pods-CraigslistAppTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F3E1F3B6F4C61CB2BDB6049C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F355E2237A4236294DF92FBF /* Pods_CraigslistApp.framework */,
+				27A590E9CD6253ED8A615260 /* Pods_CraigslistApp_CraigslistAppUITests.framework */,
+				271F06D0C22AF59ED152A2D5 /* Pods_CraigslistAppTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BBCC4B7A250AE1B900F4FA0C /* CraigslistApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BBCC4BA5250AE1BB00F4FA0C /* Build configuration list for PBXNativeTarget "CraigslistApp" */;
+			buildPhases = (
+				F50EF4722B0047AD8418C7D2 /* [CP] Check Pods Manifest.lock */,
+				BBCC4B77250AE1B900F4FA0C /* Sources */,
+				BBCC4B78250AE1B900F4FA0C /* Frameworks */,
+				BBCC4B79250AE1B900F4FA0C /* Resources */,
+				DA27041C925EB1BBF2E40645 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CraigslistApp;
+			productName = CraigslistApp;
+			productReference = BBCC4B7B250AE1B900F4FA0C /* CraigslistApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BBCC4B90250AE1BB00F4FA0C /* CraigslistAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BBCC4BA8250AE1BB00F4FA0C /* Build configuration list for PBXNativeTarget "CraigslistAppTests" */;
+			buildPhases = (
+				4A05BAFFDCF1CEA4B40BCD7F /* [CP] Check Pods Manifest.lock */,
+				BBCC4B8D250AE1BB00F4FA0C /* Sources */,
+				BBCC4B8E250AE1BB00F4FA0C /* Frameworks */,
+				BBCC4B8F250AE1BB00F4FA0C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BBCC4B93250AE1BB00F4FA0C /* PBXTargetDependency */,
+			);
+			name = CraigslistAppTests;
+			productName = CraigslistAppTests;
+			productReference = BBCC4B91250AE1BB00F4FA0C /* CraigslistAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BBCC4B9B250AE1BB00F4FA0C /* CraigslistAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BBCC4BAB250AE1BB00F4FA0C /* Build configuration list for PBXNativeTarget "CraigslistAppUITests" */;
+			buildPhases = (
+				F584A529A58FE2501674C18A /* [CP] Check Pods Manifest.lock */,
+				BBCC4B98250AE1BB00F4FA0C /* Sources */,
+				BBCC4B99250AE1BB00F4FA0C /* Frameworks */,
+				BBCC4B9A250AE1BB00F4FA0C /* Resources */,
+				84401A1FCE02169D2A892E67 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BBCC4B9E250AE1BB00F4FA0C /* PBXTargetDependency */,
+			);
+			name = CraigslistAppUITests;
+			productName = CraigslistAppUITests;
+			productReference = BBCC4B9C250AE1BB00F4FA0C /* CraigslistAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BBCC4B73250AE1B900F4FA0C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1170;
+				LastUpgradeCheck = 1170;
+				ORGANIZATIONNAME = "Eric Nguyen";
+				TargetAttributes = {
+					BBCC4B7A250AE1B900F4FA0C = {
+						CreatedOnToolsVersion = 11.7;
+					};
+					BBCC4B90250AE1BB00F4FA0C = {
+						CreatedOnToolsVersion = 11.7;
+						TestTargetID = BBCC4B7A250AE1B900F4FA0C;
+					};
+					BBCC4B9B250AE1BB00F4FA0C = {
+						CreatedOnToolsVersion = 11.7;
+						TestTargetID = BBCC4B7A250AE1B900F4FA0C;
+					};
+				};
+			};
+			buildConfigurationList = BBCC4B76250AE1B900F4FA0C /* Build configuration list for PBXProject "CraigslistApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BBCC4B72250AE1B900F4FA0C;
+			productRefGroup = BBCC4B7C250AE1B900F4FA0C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BBCC4B7A250AE1B900F4FA0C /* CraigslistApp */,
+				BBCC4B90250AE1BB00F4FA0C /* CraigslistAppTests */,
+				BBCC4B9B250AE1BB00F4FA0C /* CraigslistAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BBCC4B79250AE1B900F4FA0C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBCC4B8B250AE1BB00F4FA0C /* LaunchScreen.storyboard in Resources */,
+				BBCC4B88250AE1BB00F4FA0C /* Assets.xcassets in Resources */,
+				BBCC4B86250AE1B900F4FA0C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBCC4B8F250AE1BB00F4FA0C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBCC4B9A250AE1BB00F4FA0C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4A05BAFFDCF1CEA4B40BCD7F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CraigslistAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		84401A1FCE02169D2A892E67 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CraigslistApp-CraigslistAppUITests/Pods-CraigslistApp-CraigslistAppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CraigslistApp-CraigslistAppUITests/Pods-CraigslistApp-CraigslistAppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CraigslistApp-CraigslistAppUITests/Pods-CraigslistApp-CraigslistAppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DA27041C925EB1BBF2E40645 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CraigslistApp/Pods-CraigslistApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CraigslistApp/Pods-CraigslistApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CraigslistApp/Pods-CraigslistApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F50EF4722B0047AD8418C7D2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CraigslistApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F584A529A58FE2501674C18A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CraigslistApp-CraigslistAppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BBCC4B77250AE1B900F4FA0C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBCC4B83250AE1B900F4FA0C /* ViewController.swift in Sources */,
+				BBCC4BAF250AE24600F4FA0C /* APIHandler.swift in Sources */,
+				BBCC4B7F250AE1B900F4FA0C /* AppDelegate.swift in Sources */,
+				BBCC4B81250AE1B900F4FA0C /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBCC4B8D250AE1BB00F4FA0C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBCC4B96250AE1BB00F4FA0C /* CraigslistAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBCC4B98250AE1BB00F4FA0C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBCC4BA1250AE1BB00F4FA0C /* CraigslistAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BBCC4B93250AE1BB00F4FA0C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BBCC4B7A250AE1B900F4FA0C /* CraigslistApp */;
+			targetProxy = BBCC4B92250AE1BB00F4FA0C /* PBXContainerItemProxy */;
+		};
+		BBCC4B9E250AE1BB00F4FA0C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BBCC4B7A250AE1B900F4FA0C /* CraigslistApp */;
+			targetProxy = BBCC4B9D250AE1BB00F4FA0C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BBCC4B84250AE1B900F4FA0C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BBCC4B85250AE1B900F4FA0C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BBCC4B89250AE1BB00F4FA0C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BBCC4B8A250AE1BB00F4FA0C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BBCC4BA3250AE1BB00F4FA0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BBCC4BA4250AE1BB00F4FA0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BBCC4BA6250AE1BB00F4FA0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DFE056D9669C0AD8E6820E5C /* Pods-CraigslistApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CraigslistApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Eric-Nguyen.CraigslistApp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BBCC4BA7250AE1BB00F4FA0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CFA272D7E3E1CBF7690E9D8E /* Pods-CraigslistApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CraigslistApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Eric-Nguyen.CraigslistApp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BBCC4BA9250AE1BB00F4FA0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9AFFD0D7927718731D29D1F /* Pods-CraigslistAppTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CraigslistAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Eric-Nguyen.CraigslistAppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CraigslistApp.app/CraigslistApp";
+			};
+			name = Debug;
+		};
+		BBCC4BAA250AE1BB00F4FA0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 324AC3422FEB4AA3BD21A888 /* Pods-CraigslistAppTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CraigslistAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Eric-Nguyen.CraigslistAppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CraigslistApp.app/CraigslistApp";
+			};
+			name = Release;
+		};
+		BBCC4BAC250AE1BB00F4FA0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D44E06CBF3D542A96C389AFD /* Pods-CraigslistApp-CraigslistAppUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CraigslistAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Eric-Nguyen.CraigslistAppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CraigslistApp;
+			};
+			name = Debug;
+		};
+		BBCC4BAD250AE1BB00F4FA0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7778D0C33C3B2FD761FD5B55 /* Pods-CraigslistApp-CraigslistAppUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CraigslistAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Eric-Nguyen.CraigslistAppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CraigslistApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BBCC4B76250AE1B900F4FA0C /* Build configuration list for PBXProject "CraigslistApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BBCC4BA3250AE1BB00F4FA0C /* Debug */,
+				BBCC4BA4250AE1BB00F4FA0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BBCC4BA5250AE1BB00F4FA0C /* Build configuration list for PBXNativeTarget "CraigslistApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BBCC4BA6250AE1BB00F4FA0C /* Debug */,
+				BBCC4BA7250AE1BB00F4FA0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BBCC4BA8250AE1BB00F4FA0C /* Build configuration list for PBXNativeTarget "CraigslistAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BBCC4BA9250AE1BB00F4FA0C /* Debug */,
+				BBCC4BAA250AE1BB00F4FA0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BBCC4BAB250AE1BB00F4FA0C /* Build configuration list for PBXNativeTarget "CraigslistAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BBCC4BAC250AE1BB00F4FA0C /* Debug */,
+				BBCC4BAD250AE1BB00F4FA0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BBCC4B73250AE1B900F4FA0C /* Project object */;
+}
