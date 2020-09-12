@@ -40,12 +40,23 @@ class Search(db.Model):
         return ret
 
     @staticmethod
+    def find_all_searches():
+        '''
+        Finds all searches stored in the database.\n
+        Params:\n
+        None\n
+        Returns:\n
+        Returns all the searches\n
+        '''
+        return Search.query.filter_by().all()
+    
+    @staticmethod
     def find_searches_by_keywords(keywords: str):
         '''
-        Finds a search based on the keywords entered.\n
+        Finds all searches stored in the database.\n
         Params:\n
-        keywords --> The keywords that a user is searching for\n
+        None\n
         Returns:\n
-        Returns the search with the corresponding keywords\n
+        Returns all the searches\n
         '''
         return Search.query.filter_by(keywords=keywords).first()

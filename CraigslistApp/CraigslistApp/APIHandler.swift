@@ -29,4 +29,22 @@ class APIHandler {
         }
         
     }
+    
+    static func getSearches(completion: @escaping (_ searches: [(id: Int, keywords: String, min_price: Int, max_price: Int)])-> Void){
+        print("Request Processing")
+        AF.request("http://127.0.0.1:5000/Search", method: .get).responseJSON { response in
+            if let json = response.value as? [String: AnyObject]{
+                var returnSearches = [(id: Int, keywords: String, min_price: Int, max_price: Int)]()
+                if let searches = json["searches"] as? [[String: AnyObject]]{
+                    for search in searches{
+                        returnSearches.append((id: search["id"] as! Int, keywords: search["keywords"] as! String, search["min_price"] as! Int, search["max_price"] as! Int))
+                    }
+                }
+                completion(returnSearches)
+            }
+                
+            
+        }
+       
+    }
 }

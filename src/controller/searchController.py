@@ -4,6 +4,7 @@ import datetime
 class Searches(Resource):
 
 
+
     def post(self):
         postParser = reqparse.RequestParser()
         postParser.add_argument('keywords',
@@ -32,13 +33,6 @@ class Searches(Resource):
         return {"message": "Search added successfully."}, 201
 
     def get(self):
-        getParser = reqparse.RequestParser()
-        getParser.add_argument('keywords',
-            type=str,
-            required=True,
-            help="This is a required field."
-        ) 
-        inputData = getParser.parse_args()
 	
-        return Search.find_searches_by_keywords(inputData['keywords']).json()
+        return {"searches": list(map(lambda x: x.json(), Search.find_all_searches()))}
 
