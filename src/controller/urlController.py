@@ -11,11 +11,6 @@ class Urls(Resource):
            required=True,
            help="This is a required field."
         )
-        postParser.add_argument('craigslist_id',
-           type=int,
-           required=True,
-           help="This is a required field."
-        )   
         postParser.add_argument('keywords',
            type=int,
            required=True,
@@ -28,7 +23,7 @@ class Urls(Resource):
         )  
         inputData = postParser.parse_args()
  
-        if Url.find_url_by_id(inputData['craigslist_id'], inputData['keywords']):
+        if Url.find_url_by_hyperlink(inputData['hyperlink']):
             return {"message": "Posting already found"}, 400
 
         url = Url(**inputData)
@@ -45,5 +40,5 @@ class Urls(Resource):
         )
         inputData = getParser.parse_args()
 	
-        return {'Urls': list(map(lambda x: x.json(), Url.find_url_by_keywords(inputData['keywords'])))}
+        return {'urls': list(map(lambda x: x.json(), Url.find_url_by_keywords(inputData['keywords'])))}
 

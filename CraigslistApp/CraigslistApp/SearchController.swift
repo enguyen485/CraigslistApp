@@ -9,10 +9,11 @@
 import UIKit
 
 
-class TableViewController: UITableViewController {
+class SearchController: UITableViewController {
     
     var searches = [(id: Int, keywords: String, min_price: Int, max_price: Int)]()
-    
+    var id = 0
+    var contact: Int?
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,18 +24,15 @@ class TableViewController: UITableViewController {
         
            
     }
-
+    func getId() -> Int {
+        return id
+    }
     // MARK: - Table view data source
    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(searches[indexPath[1]].id)
-        if let viewController = storyboard?.instantiateViewController(identifier: "UrlController") as? UITableViewController {
-            print("SRDFG")
-            tableView.deselectRow(at: indexPath, animated: false)
-
-            navigationController?.pushViewController(viewController, animated: true)
-        }
+        id = searches[indexPath[1]].id
     }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return searches.count
@@ -50,6 +48,15 @@ class TableViewController: UITableViewController {
         cell.detailTextLabel!.text = "Minimum Price: " + String(searches[indexPath[1]].min_price) + ", Maximum price: " + String(searches[indexPath[1]].max_price)
         
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let UrlController = segue.destination as? UrlController,
+            let index = tableView.indexPathForSelectedRow?.row
+            else{
+                return
+        }
+        UrlController.contact = index
     }
     
 

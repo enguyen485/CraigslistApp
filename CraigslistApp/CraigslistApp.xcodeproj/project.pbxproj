@@ -19,7 +19,7 @@
 		BBCC4B96250AE1BB00F4FA0C /* CraigslistAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCC4B95250AE1BB00F4FA0C /* CraigslistAppTests.swift */; };
 		BBCC4BA1250AE1BB00F4FA0C /* CraigslistAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCC4BA0250AE1BB00F4FA0C /* CraigslistAppUITests.swift */; };
 		BBCC4BAF250AE24600F4FA0C /* APIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCC4BAE250AE24600F4FA0C /* APIHandler.swift */; };
-		BBCC4BBB250BFC0400F4FA0C /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCC4BBA250BFC0400F4FA0C /* TableViewController.swift */; };
+		BBCC4BBB250BFC0400F4FA0C /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCC4BBA250BFC0400F4FA0C /* SearchController.swift */; };
 		BBCC4BBD250D89C900F4FA0C /* UrlController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCC4BBC250D89C900F4FA0C /* UrlController.swift */; };
 /* End PBXBuildFile section */
 
@@ -60,7 +60,7 @@
 		BBCC4BA0250AE1BB00F4FA0C /* CraigslistAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CraigslistAppUITests.swift; sourceTree = "<group>"; };
 		BBCC4BA2250AE1BB00F4FA0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BBCC4BAE250AE24600F4FA0C /* APIHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHandler.swift; sourceTree = "<group>"; };
-		BBCC4BBA250BFC0400F4FA0C /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		BBCC4BBA250BFC0400F4FA0C /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
 		BBCC4BBC250D89C900F4FA0C /* UrlController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlController.swift; sourceTree = "<group>"; };
 		CFA272D7E3E1CBF7690E9D8E /* Pods-CraigslistApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CraigslistApp.release.xcconfig"; path = "Target Support Files/Pods-CraigslistApp/Pods-CraigslistApp.release.xcconfig"; sourceTree = "<group>"; };
 		D44E06CBF3D542A96C389AFD /* Pods-CraigslistApp-CraigslistAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CraigslistApp-CraigslistAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-CraigslistApp-CraigslistAppUITests/Pods-CraigslistApp-CraigslistAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -128,7 +128,7 @@
 				BBCC4B82250AE1B900F4FA0C /* ViewController.swift */,
 				BBCC4B84250AE1B900F4FA0C /* Main.storyboard */,
 				BBCC4BBC250D89C900F4FA0C /* UrlController.swift */,
-				BBCC4BBA250BFC0400F4FA0C /* TableViewController.swift */,
+				BBCC4BBA250BFC0400F4FA0C /* SearchController.swift */,
 				BBCC4B87250AE1BB00F4FA0C /* Assets.xcassets */,
 				BBCC4B89250AE1BB00F4FA0C /* LaunchScreen.storyboard */,
 				BBCC4B8C250AE1BB00F4FA0C /* Info.plist */,
@@ -418,7 +418,7 @@
 			files = (
 				BBCC4B83250AE1B900F4FA0C /* ViewController.swift in Sources */,
 				BBCC4BBD250D89C900F4FA0C /* UrlController.swift in Sources */,
-				BBCC4BBB250BFC0400F4FA0C /* TableViewController.swift in Sources */,
+				BBCC4BBB250BFC0400F4FA0C /* SearchController.swift in Sources */,
 				BBCC4BAF250AE24600F4FA0C /* APIHandler.swift in Sources */,
 				BBCC4B7F250AE1B900F4FA0C /* AppDelegate.swift in Sources */,
 				BBCC4B81250AE1B900F4FA0C /* SceneDelegate.swift in Sources */,

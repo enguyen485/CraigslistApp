@@ -8,7 +8,6 @@ class Url(db.Model):
     Fields:\n
     id --> url ID. Unique to every url.\n
     hyperlink --> The hyperlink that corresponds to a specific listing
-    craigslist_id --> The id number of the listing that craigslist has assigned
     keywords --> The keywords that match this new listing
     data --> The date that this listing was found
     @author ericnguyen
@@ -17,7 +16,6 @@ class Url(db.Model):
     __tablename__ = 'URLs'
     id = db.Column(db.Integer, primary_key=True)
     hyperlink = db.Column(db.String, unique=False, nullable=False)
-    craigslist_id = db.Column(db.Integer, nullable=False, default=False)
     keywords = db.Column(db.Integer, nullable=False, default=False)
     date = db.Column(db.String, nullable=False, default=False)
 
@@ -27,9 +25,8 @@ class Url(db.Model):
     def __repr__(self) -> str:
         return "Listing ID: %s, keywords: %s" % (self.id, self.keywords)
 
-    def __init__(self, hyperlink, craigslist_id, keywords, date):
+    def __init__(self, hyperlink, keywords, date):
         self.hyperlink = hyperlink
-        self.craigslist_id = craigslist_id
         self.keywords = keywords
         self.date = date
 
@@ -41,22 +38,20 @@ class Url(db.Model):
         ret = {}
         ret['id'] = self.id
         ret['hyperlink'] = self.hyperlink
-        ret['craigslist_id'] = self.craigslist_id
         ret['keywords'] = self.keywords
         ret['date'] = self.date
         return ret
 
     @staticmethod
-    def find_url_by_id(craigslist_id: int, keywords: int):
+    def find_url_by_hyperlink(hyperlink: str):
         '''
-        Finds an url in the database based on its id.\n
+        Finds an url in the database based on its hyperlink.\n
         Params:\n
-        craigslist_id --> The id of a specific url\n
-        keywords --> The foreign key associated with the keyword search\n
+        hyperlink --> The hyperlink associated with a url\n
         Returns:\n
-        Returns an url with the corresponding id\n
+        Returns an url with the corresponding hyperlink\n
         '''
-        return Url.query.filter_by(craigslist_id=craigslist_id, keywords=keywords).first()
+        return Url.query.filter_by(hyperlink=hyperlink).first()
 
     @staticmethod
     def find_url_by_keywords(keywords: int):
