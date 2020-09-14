@@ -2,8 +2,8 @@ import asyncio
 from flask import Flask
 from flask_restful import Api
 
-from controller.urlController import Urls
-from controller.searchController import Searches
+from controller.url_controller import Urls
+from controller.search_controller import Searches
 
 
 app = Flask(__name__)
