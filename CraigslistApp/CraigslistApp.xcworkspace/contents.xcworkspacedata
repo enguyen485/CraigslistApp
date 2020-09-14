@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/ericnguyen/Desktop/CraigslistApp/CraigslistApp/CraigslistApp/deletionController.swift">
+   </FileRef>
+   <FileRef
       location = "group:CraigslistApp.xcodeproj">
    </FileRef>
    <FileRef

@@ -15,18 +15,35 @@ class Urls(Resource):
            type=int,
            required=True,
            help="This is a required field."
-        )  
-        postParser.add_argument('date',
+        ) 
+        inputData = postParser.parse_args()
+        inputData["is_deleted"] = False
+ 
+        if Url.find_url_by_hyperlink(inputData['hyperlink'], inputData['keywords']):
+            return {"message": "Posting already found"}, 400
+
+        url = Url(**inputData)
+        url.save()
+
+        return {"message": "Posting added successfully."}, 201
+
+    def delete(self):
+        postParser = reqparse.RequestParser()
+        postParser.add_argument('hyperlink',
            type=str,
+           required=True,
+           help="This is a required field."
+        )
+        postParser.add_argument('keywords',
+           type=int,
            required=True,
            help="This is a required field."
         )  
         inputData = postParser.parse_args()
- 
-        if Url.find_url_by_hyperlink(inputData['hyperlink']):
-            return {"message": "Posting already found"}, 400
+         
+        url = Url.find_url_by_hyperlink(inputData['hyperlink'], inputData['keywords'])
 
-        url = Url(**inputData)
+        url.deleteUrl()
         url.save()
 
         return {"message": "Posting added successfully."}, 201

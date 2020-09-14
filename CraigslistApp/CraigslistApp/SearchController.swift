@@ -24,9 +24,7 @@ class SearchController: UITableViewController {
         
            
     }
-    func getId() -> Int {
-        return id
-    }
+
     // MARK: - Table view data source
    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -56,7 +54,7 @@ class SearchController: UITableViewController {
             else{
                 return
         }
-        UrlController.contact = index
+        UrlController.contact = searches[index].id
     }
     
 

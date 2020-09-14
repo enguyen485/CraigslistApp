@@ -17,7 +17,7 @@ class Url(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     hyperlink = db.Column(db.String, unique=False, nullable=False)
     keywords = db.Column(db.Integer, nullable=False, default=False)
-    date = db.Column(db.String, nullable=False, default=False)
+    is_deleted = db.Column(db.Boolean, nullable=False, default=False)
 
     def __lt__(self, other):
         return self.id < other.id
@@ -25,10 +25,11 @@ class Url(db.Model):
     def __repr__(self) -> str:
         return "Listing ID: %s, keywords: %s" % (self.id, self.keywords)
 
-    def __init__(self, hyperlink, keywords, date):
+    def __init__(self, hyperlink, keywords, is_deleted):
         self.hyperlink = hyperlink
         self.keywords = keywords
-        self.date = date
+        self.is_deleted = is_deleted
+
 
     def save(self) -> None:
         db.session.add(self)
@@ -39,11 +40,11 @@ class Url(db.Model):
         ret['id'] = self.id
         ret['hyperlink'] = self.hyperlink
         ret['keywords'] = self.keywords
-        ret['date'] = self.date
+        ret['is_deleted'] = self.is_deleted
         return ret
 
     @staticmethod
-    def find_url_by_hyperlink(hyperlink: str):
+    def find_url_by_hyperlink(hyperlink: str, keywords: int):
         '''
         Finds an url in the database based on its hyperlink.\n
         Params:\n
@@ -51,7 +52,7 @@ class Url(db.Model):
         Returns:\n
         Returns an url with the corresponding hyperlink\n
         '''
-        return Url.query.filter_by(hyperlink=hyperlink).first()
+        return Url.query.filter_by(hyperlink=hyperlink, keywords=keywords).first()
 
     @staticmethod
     def find_url_by_keywords(keywords: int):
@@ -62,4 +63,10 @@ class Url(db.Model):
         Returns:\n
         Returns all url with the corresponding keyword\n
         '''
-        return Url.query.filter_by(keywords=keywords).all()
+        return Url.query.filter_by(keywords=keywords, is_deleted = False).all()
+
+    def deleteUrl(self):
+        self.is_deleted = True
+        self.save()
+
+    
