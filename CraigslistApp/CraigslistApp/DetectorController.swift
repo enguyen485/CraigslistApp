@@ -9,16 +9,16 @@
 import UIKit
 
 
-class SearchController: UITableViewController {
+class DetectorController: UITableViewController {
     
-    var searches = [(id: Int, keywords: String, min_price: Int, max_price: Int)]()
+    var detectors = [(id: Int, keywords: String, min_price: Int, max_price: Int)]()
     var id = 0
     var contact: Int?
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        APIHandler.getSearches{ [weak self] (searches) in
-            self?.searches = searches
+        APIHandler.getDetectors{ [weak self] (detectors) in
+            self?.detectors = detectors
             self?.tableView.reloadData()
         }
         
@@ -28,22 +28,22 @@ class SearchController: UITableViewController {
     // MARK: - Table view data source
    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        id = searches[indexPath[1]].id
+        id = detectors[indexPath[1]].id
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return searches.count
+        return detectors.count
         
     }
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
    
-        let cell = tableView.dequeueReusableCell(withIdentifier: "SearchItem", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "DetectorItem", for: indexPath)
 
-        cell.textLabel!.text = searches[indexPath[1]].keywords
-        cell.detailTextLabel!.text = "Minimum Price: " + String(searches[indexPath[1]].min_price) + ", Maximum price: " + String(searches[indexPath[1]].max_price)
+        cell.textLabel!.text = detectors[indexPath[1]].keywords
+        cell.detailTextLabel!.text = "Minimum Price: " + String(detectors[indexPath[1]].min_price) + ", Maximum price: " + String(detectors[indexPath[1]].max_price)
         
         return cell
     }
@@ -54,7 +54,7 @@ class SearchController: UITableViewController {
             else{
                 return
         }
-        UrlController.contact = searches[index].id
+        UrlController.contact = detectors[index].id
     }
     
 

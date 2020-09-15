@@ -2,18 +2,18 @@ from db import db
 from typing import Dict, Optional, List
 
 
-class Search(db.Model):
+class Detector(db.Model):
     """
-    Represents searches that a user wants to be notified for\n
+    Represents detector that a user wants to be notified for\n
     Fields:\n
-    id --> url ID. Unique to every search.\n
-    keywords --> The keywords that the user is searching for\n
-    min_price --> The minimum price that is associated with this search\n
-    max_price --> The maximum price that is associated with this search\n
+    id --> url ID. Unique to every detector.\n
+    keywords --> The keywords that the user is detectoring for\n
+    min_price --> The minimum price that is associated with this detector\n
+    max_price --> The maximum price that is associated with this detector\n
     @author ericnguyen
     """
 
-    __tablename__ = 'Searches'
+    __tablename__ = 'Detectors'
     id = db.Column(db.Integer, primary_key=True)
     keywords = db.Column(db.String, unique=True, nullable=False)
     min_price = db.Column(db.Integer, nullable=False)
@@ -40,23 +40,23 @@ class Search(db.Model):
         return ret
 
     @staticmethod
-    def find_all_searches():
+    def get_all_detectors():
         '''
-        Finds all searches stored in the database.\n
+        Finds all detectors stored in the database.\n
         Params:\n
         None\n
         Returns:\n
-        Returns all the searches\n
+        Returns all the detectors\n
         '''
-        return Search.query.filter_by().all()
+        return Detector.query.filter_by().all()
     
     @staticmethod
-    def find_searches_by_keywords(keywords: str):
+    def get_detectors_by_keywords(keywords: str):
         '''
-        Finds all searches stored in the database.\n
+        Finds all detectors stored in the database.\n
         Params:\n
         None\n
         Returns:\n
-        Returns all the searches\n
+        Returns all the detectors\n
         '''
-        return Search.query.filter_by(keywords=keywords).first()
+        return Detector.query.filter_by(keywords=keywords).first()

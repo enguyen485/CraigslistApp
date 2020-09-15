@@ -19,9 +19,6 @@ class Url(db.Model):
     keywords = db.Column(db.Integer, nullable=False, default=False)
     is_deleted = db.Column(db.Boolean, nullable=False, default=False)
 
-    def __lt__(self, other):
-        return self.id < other.id
-
     def __repr__(self) -> str:
         return "Listing ID: %s, keywords: %s" % (self.id, self.keywords)
 
@@ -29,7 +26,6 @@ class Url(db.Model):
         self.hyperlink = hyperlink
         self.keywords = keywords
         self.is_deleted = is_deleted
-
 
     def save(self) -> None:
         db.session.add(self)
@@ -42,6 +38,21 @@ class Url(db.Model):
         ret['keywords'] = self.keywords
         ret['is_deleted'] = self.is_deleted
         return ret
+
+    @staticmethod
+    def get_all_urls():
+        return Url.query.all()
+
+    @staticmethod
+    def find_url_by_id(id: int):
+        '''
+        Finds an url in the database based on its id.\n
+        Params:\n
+        id--> The id associated with a url\n
+        Returns:\n
+        Returns an url with the corresponding id\n
+        '''
+        return Url.query.filter_by(id=id).first()
 
     @staticmethod
     def find_url_by_hyperlink(hyperlink: str, keywords: int):

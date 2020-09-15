@@ -21,7 +21,7 @@ class ViewController: UIViewController {
 
     @IBAction func onClick(_ sender: Any) {
         
-        APIHandler.addSearch(keywords: keywordsText.text!, min_price: Int(minPrice.text!)!, max_price: Int(maxPrice.text!)!)
+        APIHandler.addDetector(keywords: keywordsText.text!, min_price: Int(minPrice.text!)!, max_price: Int(maxPrice.text!)!)
     }
     
 }

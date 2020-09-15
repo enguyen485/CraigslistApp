@@ -1,29 +1,26 @@
-import asyncio
 from flask import Flask
 from flask_restful import Api
-
+from flask_sqlalchemy import SQLAlchemy
 from controller.url_controller import Urls
-from controller.search_controller import Searches
-
+from controller.detector_controller import DetectorController
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.secret_key = 'eric'
+app.secret_key = 'Aw2dWr6'
 api = Api(app)
-
-@app.before_first_request
-def create_tables():
-    db.create_all()
-
+    
 #Adding resources
 api.add_resource(Urls, '/Url')
-api.add_resource(Searches, '/Search')
+api.add_resource(DetectorController, '/Detector')
 
 if __name__ == '__main__':
     from db import db
+    db.app = app
+    app.app_context().push()
     db.init_app(app)
-    app.run(port=5000, debug=True)
-
+    with app.app_context():
+        db.create_all()
+        DetectorController.initialize()
     
-    
+    app.run(port=5000, debug=True, use_reloader=False)

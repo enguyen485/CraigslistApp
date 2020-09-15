@@ -55,16 +55,16 @@
             </objects>
             <point key="canvasLocation" x="-639.13043478260875" y="8.7053571428571423"/>
         </scene>
-        <!--Search Controller-->
+        <!--Detector Controller-->
         <scene sceneID="ZEU-BN-TOl">
             <objects>
-                <tableViewController id="s3N-o5-GTc" customClass="SearchController" customModule="CraigslistApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="s3N-o5-GTc" customClass="DetectorController" customModule="CraigslistApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="RyN-Hp-9ZE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="blue" indentationWidth="10" reuseIdentifier="SearchItem" textLabel="rq3-e1-DjG" detailTextLabel="de3-Ag-SDh" style="IBUITableViewCellStyleSubtitle" id="o44-Mr-BfI">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="blue" indentationWidth="10" reuseIdentifier="DetectorItem" textLabel="rq3-e1-DjG" detailTextLabel="de3-Ag-SDh" style="IBUITableViewCellStyleSubtitle" id="o44-Mr-BfI">
                                 <rect key="frame" x="0.0" y="28" width="414" height="55.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="o44-Mr-BfI" id="vcC-aW-x8X">
@@ -101,7 +101,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2wt-tz-DTh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-339" y="834"/>
+            <point key="canvasLocation" x="-339.13043478260875" y="833.70535714285711"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -220,7 +220,7 @@
         <!--Deletion Controller-->
         <scene sceneID="E6S-id-5LA">
             <objects>
-                <viewController id="5FU-zu-Bwx" customClass="deletionController" sceneMemberID="viewController">
+                <viewController id="5FU-zu-Bwx" customClass="deletionController" customModule="CraigslistApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="awN-x5-e2F">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -235,6 +235,7 @@ EFllcw
 </string>
                                 </state>
                                 <connections>
+                                    <action selector="onClick:" destination="5FU-zu-Bwx" eventType="primaryActionTriggered" id="p0g-Mf-Q6g"/>
                                     <segue destination="oYT-K0-7AH" kind="show" id="BEp-5H-8vl"/>
                                 </connections>
                             </button>
@@ -266,10 +267,14 @@ EFllcw
                         <viewLayoutGuide key="safeArea" id="FPE-1O-faE"/>
                     </view>
                     <navigationItem key="navigationItem" id="Kvq-yS-XKM"/>
+                    <connections>
+                        <outlet property="deleteButton" destination="H15-fc-5vN" id="4QF-kH-AZq"/>
+                        <outlet property="hyperlinkLabel" destination="uWr-AY-sck" id="UbJ-lx-HJd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RFV-kC-XRW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2847.826086956522" y="675"/>
+            <point key="canvasLocation" x="2946" y="686"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
