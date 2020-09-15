@@ -11,20 +11,19 @@ class Detector(db.Model):
     max_price --> The maximum price that is associated with this detector\n
     @author ericnguyen
     """
-
     __tablename__ = 'Detectors'
     id = db.Column(db.Integer, primary_key=True)
     keywords = db.Column(db.String, unique=True, nullable=False)
     min_price = db.Column(db.Integer, nullable=False)
     max_price = db.Column(db.Integer, nullable=False)
 
-    def __repr__(self) -> str:
-        return "Keywords: %s, Min Price: %d, Max Price: %d" % (self.keywords, self.min_price, self.max_price)
-
     def __init__(self, keywords, min_price, max_price):
         self.keywords = keywords
         self.min_price = min_price
         self.max_price = max_price
+
+    def __repr__(self) -> str:
+        return "Keywords: %s, Min Price: %d, Max Price: %d" % (self.keywords, self.min_price, self.max_price)
 
     def save(self) -> None:
         db.session.add(self)
@@ -38,24 +37,24 @@ class Detector(db.Model):
         ret['max_price'] = self.max_price
         return ret
 
+    '''
+    Finds all detectors stored in the database.\n
+    Params:\n
+    None\n
+    Returns:\n
+    Returns all the detectors\n
+    '''
     @staticmethod
     def get_all_detectors():
-        '''
-        Finds all detectors stored in the database.\n
-        Params:\n
-        None\n
-        Returns:\n
-        Returns all the detectors\n
-        '''
         return Detector.query.filter_by().all()
     
+    '''
+    Finds all detectors stored in the database.\n
+    Params:\n
+    None\n
+    Returns:\n
+    Returns all the detectors\n
+    '''
     @staticmethod
     def get_detectors_by_keywords(keywords: str):
-        '''
-        Finds all detectors stored in the database.\n
-        Params:\n
-        None\n
-        Returns:\n
-        Returns all the detectors\n
-        '''
         return Detector.query.filter_by(keywords=keywords).first()

@@ -3,7 +3,10 @@ from flask_restful import Resource, reqparse
 from datetime import datetime, timedelta
 from models.detectors import Detector	
 from models.url import Url
-import sys, bs4, requests, smtplib
+
+import sys
+import bs4
+import smtplib
 import asyncio
 import time
 

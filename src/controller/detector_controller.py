@@ -1,6 +1,7 @@
 from flask_restful import Resource, reqparse
 from models.detectors import Detector
 from manager.detector_manager import DetectorManager
+
 class DetectorController(Resource):
     def __init__(self):
         self.manager = DetectorManager.getInstance()
@@ -9,7 +10,8 @@ class DetectorController(Resource):
     def initialize():
         DetectorManager.getInstance().initialize()
 
-    def post(self):
+    @staticmethod
+    def __makePostParser():
         postParser = reqparse.RequestParser()
         postParser.add_argument('keywords',
             type=str,
@@ -26,7 +28,12 @@ class DetectorController(Resource):
             required=True,
             help="This is a required field."
         ) 
-        inputData = postParser.parse_args()
+        return postParser
+
+    __postParser = __makePostParser.__func__()
+
+    def post(self):
+        inputData = DetectorController.__postParser.parse_args()
 
         if Detector.get_detectors_by_keywords(inputData['keywords']):
             return {"message": "Detector already exists"}, 400
