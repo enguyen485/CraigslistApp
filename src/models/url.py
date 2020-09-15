@@ -1,7 +1,6 @@
 from db import db
 from typing import Dict, Optional, List
 
-
 class Url(db.Model):
     """
     Represents a url that corresponds to a new listing on craigslist\n
@@ -12,7 +11,7 @@ class Url(db.Model):
     data --> The date that this listing was found
     @author ericnguyen
     """
-
+    
     __tablename__ = 'URLs'
     id = db.Column(db.Integer, primary_key=True)
     hyperlink = db.Column(db.String, unique=False, nullable=False)

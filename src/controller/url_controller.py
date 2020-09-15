@@ -35,9 +35,7 @@ class Urls(Resource):
            help="This is a required field."
         )
         inputData = deleteParser.parse_args()
-         
         url = Url.find_url_by_id(inputData['id'])
-
         url.deleteUrl()
 
         return {"message": "Posting deleted Successfully."}, 201

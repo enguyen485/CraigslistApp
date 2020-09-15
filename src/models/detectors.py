@@ -1,7 +1,6 @@
 from db import db
 from typing import Dict, Optional, List
 
-
 class Detector(db.Model):
     """
     Represents detector that a user wants to be notified for\n

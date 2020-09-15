@@ -38,7 +38,6 @@ class DetectorController(Resource):
         return {"message": "Detector added successfully."}, 201
 
     def get(self):
-	
         return {"detectors": list(map(lambda x: x.json(), 
                 Detector.get_all_detectors()))}
 
